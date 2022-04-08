@@ -1,0 +1,81 @@
+.clippy {
+    display: flex;
+    position: absolute;
+    right: 60px;
+    bottom: 150px;
+
+    .chat-bubble {
+        transform: scale(0);
+        width: 300px;
+        margin: 50px auto;
+        font-family: "Calibri";
+        background: #f2f1c3;
+        padding: 10px;
+        position: relative;
+        animation: 0.5s speechbubble-in 4s linear forwards,
+          0.5s speechbubble-out 8s linear forwards;
+
+          &:before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-left: 10px solid transparent;
+            border-right: 10px solid #f2f1c3;
+            border-top: 10px solid #f2f1c3;
+            border-bottom: 10px solid transparent;
+            right: 19px;
+            bottom: -19px;
+          }
+    }
+
+    img {
+        position: absolute;
+        right: -190px;
+        bottom: -190px;
+        transform: scale(0);
+    
+        animation: 1s spin-in 2.5s linear forwards, 1s spin-out 9s linear forwards;
+      }
+}
+
+
+  
+  @keyframes spin-in {
+    0% {
+      transform: rotate(0deg) scale(0);
+    }
+  
+    100% {
+      transform: rotate(720deg) scale(0.3);
+    }
+  }
+  @keyframes spin-out {
+    0% {
+      transform: rotate(720deg) scale(0.3);
+    }
+  
+    100% {
+      transform: rotate(0deg) scale(0);
+    }
+  }
+  @keyframes speechbubble-in {
+    0% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  @keyframes speechbubble-out {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(0);
+    }
+}

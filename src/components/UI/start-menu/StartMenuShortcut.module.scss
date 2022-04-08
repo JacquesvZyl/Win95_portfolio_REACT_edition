@@ -1,0 +1,24 @@
+@import '../../../SCSS/variables.scss';
+
+.shortcut {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    cursor: pointer;
+    &:hover {
+        background-color: $colorBlue;
+        span {
+            color: white;
+        }
+    }
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    span::first-letter {
+      text-decoration: underline;
+    }
+}

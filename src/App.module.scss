@@ -1,0 +1,15 @@
+@import '../src/SCSS/variables.scss';
+
+.app {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: $colorBackgroundBlue;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    .taskbar {
+        bottom: 0;
+    }
+}
