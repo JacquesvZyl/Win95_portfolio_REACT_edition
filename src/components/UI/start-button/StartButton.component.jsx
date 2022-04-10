@@ -9,7 +9,6 @@ function StartButton(props) {
       className={styles.start}
       inverted={props.isClicked}
       onClick={props.onClick}
-      tabIndex={0}
     >
       <img src={startImg} alt="start button" />
       <span>Start</span>

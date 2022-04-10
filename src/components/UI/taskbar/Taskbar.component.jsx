@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import StartButton from "../start-button/StartButton.component";
 import Time from "../time/Time.component";
 import styles from "./Taskbar.module.scss";
 import StartMenu from "../start-menu/StartMenu.component";
+import MainContext from "../../../store/Context";
 
 function Taskbar(props) {
-  const [isClicked, setIsClicked] = useState(false);
+  const ctx = useContext(MainContext);
   function buttonClickHandler() {
-    setIsClicked((prevVal) => !prevVal);
+    ctx.toggleMenu();
   }
   return (
     <div className={`${styles.taskbar} ${props.className}`}>
-      <StartButton isClicked={isClicked} onClick={buttonClickHandler} />
-      {isClicked && <StartMenu />}
+      <StartButton isClicked={ctx.isMenuOpen} onClick={buttonClickHandler} />
+      {ctx.isMenuOpen && <StartMenu />}
       <Time />
     </div>
   );

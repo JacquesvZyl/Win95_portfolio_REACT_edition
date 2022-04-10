@@ -1,0 +1,87 @@
+@import "../../../SCSS/variables.scss";
+
+.program {
+  width: 99%;
+  max-width: 1000px;
+
+  span {
+    cursor: default;
+  }
+
+  .header {
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      background-image: $colorWin95Gradient;
+      padding: 0px 5px;
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: white;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .header-right {
+        display: flex;
+        align-items: center;
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+
+    .header-bottom {
+      padding: 0px 5px;
+      display: flex;
+      gap: 20px;
+      background-color: $colorTaskBar;
+
+      span::first-letter {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .data-container {
+    overflow-y: scroll;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: $colorTaskBar;
+  justify-content: flex-start;
+
+  .footer-left {
+    display: flex;
+    align-items: center;
+    span {
+      padding: 0 5px;
+    }
+  }
+
+  .footer-right {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      padding: 0px 5px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

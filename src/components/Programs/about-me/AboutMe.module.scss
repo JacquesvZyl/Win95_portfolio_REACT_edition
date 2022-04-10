@@ -1,0 +1,42 @@
+@import "../../../SCSS/variables.scss";
+
+.main-container {
+  background-image: $colorWin95GradientReverse;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  max-height: 500px;
+  height: 70vh;
+
+  .text {
+    color: white;
+    padding: 10px;
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .image {
+    padding: 10px;
+    img {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .about {
+    flex-direction: column;
+
+    .image {
+      img {
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+}
