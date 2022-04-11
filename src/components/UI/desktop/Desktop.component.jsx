@@ -6,6 +6,7 @@ import MainContext from "../../../store/Context";
 import styles from "./Desktop.module.scss";
 import DesktopShortcuts from "../desktop-shortcuts/DesktopShortcuts.component";
 import AboutMe from "../../Programs/about-me/AboutMe.component";
+import Skills from "../../Programs/about-me/skills/Skills.componenet";
 
 function Desktop() {
   const [showClippy, setShowClippy] = useState(false);
@@ -32,6 +33,8 @@ function Desktop() {
     <div className={styles.desktop} onClick={closeMenu}>
       <DesktopShortcuts />
       {ctx.isAboutMeOpen && <AboutMe />}
+      {ctx.isSkillsOpen && <Skills />}
+
       {showClippy && <Clippy />}
       <Taskbar className={styles.taskbar} />
     </div>

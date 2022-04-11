@@ -1,0 +1,25 @@
+.container {
+  background-color: black;
+  max-width: 500px;
+
+  .text-container {
+    padding-top: 15px;
+    padding-left: 5px;
+    max-height: 500px;
+    height: 70vh;
+    color: white;
+
+    .first-prompt {
+      padding-top: 10px;
+    }
+  }
+
+  .skills {
+    padding-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    color: yellow;
+    align-items: center;
+    gap: 20px;
+  }
+}

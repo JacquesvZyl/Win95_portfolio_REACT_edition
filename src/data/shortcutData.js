@@ -18,6 +18,8 @@ const shortcutData = [
     id: "skills",
     toggleHandler: "toggleSkills",
     toggleState: "isSkillsOpen",
+    toggleMinHandler: "minimizeSkills",
+    minimizeState: "isSkillsMinimized",
   },
   {
     name: "Contact Me",
