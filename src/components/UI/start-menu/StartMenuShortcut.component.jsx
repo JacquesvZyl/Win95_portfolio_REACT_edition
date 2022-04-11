@@ -4,7 +4,10 @@ import styles from "./StartMenuShortcut.module.scss";
 
 function StartMenuShortcut(props) {
   return (
-    <div className={`${styles.shortcut} ${props.className}`}>
+    <div
+      onClick={!props.state ? props.onClick : undefined}
+      className={`${styles.shortcut} ${props.className}`}
+    >
       <img src={props.icon} alt="" />
       <span>{props.text}</span>
     </div>

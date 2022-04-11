@@ -20,8 +20,8 @@ function ProgramBorder(props) {
               <span>{shortcutData[0].name}</span>
             </div>
             <div className={styles["header-right"]}>
-              <img src={minimize} alt="minimize" />
-              <img src={close} alt="close" />
+              <img src={minimize} alt="minimize" onClick={props.onToggle} />
+              <img src={close} alt="close" onClick={props.onToggle} />
             </div>
           </div>
           <div className={styles["header-bottom"]}>

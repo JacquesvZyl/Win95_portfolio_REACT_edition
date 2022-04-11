@@ -31,7 +31,7 @@ function Desktop() {
   return (
     <div className={styles.desktop} onClick={closeMenu}>
       <DesktopShortcuts />
-      <AboutMe />
+      {ctx.isAboutMeOpen && <AboutMe />}
       {showClippy && <Clippy />}
       <Taskbar className={styles.taskbar} />
     </div>

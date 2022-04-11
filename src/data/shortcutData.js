@@ -4,19 +4,25 @@ import mail from "../assets/images/win95_icons/Mail.ico";
 
 const shortcutData = [
   {
-    name: "Who am I",
+    name: "About Me",
     icon: whoAmI,
-    id: "s1",
+    id: "aboutMe",
+    toggleHandler: "toggleAboutMe",
+    toggleState: "isAboutMeOpen",
   },
   {
     name: "Skills.cmd",
     icon: msDos,
-    id: "s2",
+    id: "skills",
+    toggleHandler: "toggleSkills",
+    toggleState: "isSkillsOpen",
   },
   {
     name: "Contact Me",
     icon: mail,
-    id: "s3",
+    id: "contactMe",
+    toggleHandler: "toggleContactMe",
+    toggleState: "isContactMeOpen",
   },
 ];
 

@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import ProgramBorder from "../../UI/program-border/ProgramBorder.componentss";
 import jacquesImage from "../../../assets/images/other_images/Jacques.jpg";
 
 import styles from "./AboutMe.module.scss";
+import MainContext from "../../../store/Context";
 
 function AboutMe() {
+  const ctx = useContext(MainContext);
   return (
-    <ProgramBorder className={styles["main-container"]}>
+    <ProgramBorder
+      className={styles["main-container"]}
+      state={ctx.isAboutMeOpen}
+      onToggle={ctx.toggleAboutMe}
+    >
       <div className={styles.about}>
         <div className={styles.text}>
           <h1>Hi! I'm Jacques</h1>

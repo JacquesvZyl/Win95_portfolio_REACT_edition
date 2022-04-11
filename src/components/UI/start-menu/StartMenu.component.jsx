@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import shortcutData from "../../../data/shortcutData";
+import MainContext from "../../../store/Context";
 import Win95Border from "../win95-border/Win95Border.component";
 import styles from "./StartMenu.module.scss";
 import StartMenuShortcut from "./StartMenuShortcut.component";
 
 function StartMenu(props) {
+  const ctx = useContext(MainContext);
   const shortcuts = shortcutData.map((shortcut) => (
     <StartMenuShortcut
       text={shortcut.name}
       icon={shortcut.icon}
       key={shortcut.id}
+      state={ctx[shortcut.toggleState]}
+      onClick={ctx[shortcut.toggleHandler]}
     />
   ));
   return (
