@@ -10,9 +10,14 @@ import Draggable from "react-draggable";
 
 function ProgramBorder(props) {
   const className = props.className ? props.className : "";
+
+  function onCloseHander() {
+    props.onToggle();
+    props.onMinimize();
+  }
   return (
-    <Draggable handle="#handle">
-      <Win95Border className={`${styles.program}`}>
+    <Draggable handle="#handle" cancel="#close, #minimize">
+      <Win95Border className={`${styles.program}`} style={props.style}>
         <div className={styles.header}>
           <div className={styles["header-top"]} id="handle">
             <div className={styles["header-left"]}>
@@ -20,8 +25,18 @@ function ProgramBorder(props) {
               <span>{shortcutData[0].name}</span>
             </div>
             <div className={styles["header-right"]}>
-              <img src={minimize} alt="minimize" onClick={props.onToggle} />
-              <img src={close} alt="close" onClick={props.onToggle} />
+              <img
+                src={minimize}
+                id="minimize"
+                alt="minimize"
+                onClick={props.onMinimize}
+              />
+              <img
+                src={close}
+                id="close"
+                alt="close"
+                onMouseDown={onCloseHander}
+              />
             </div>
           </div>
           <div className={styles["header-bottom"]}>

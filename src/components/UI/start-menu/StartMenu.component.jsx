@@ -13,7 +13,9 @@ function StartMenu(props) {
       icon={shortcut.icon}
       key={shortcut.id}
       state={ctx[shortcut.toggleState]}
-      onClick={ctx[shortcut.toggleHandler]}
+      onToggle={ctx[shortcut.toggleHandler]}
+      onMinimizeToggle={ctx[shortcut.toggleMinHandler]}
+      minimizeState={ctx[shortcut.minimizeState]}
     />
   ));
   return (

@@ -1,11 +1,16 @@
-@import '../../../SCSS/variables.scss';
+@import "../../../SCSS/variables.scss";
 
 .taskbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $colorTaskBar;
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+
+  .left-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: $colorTaskBar;
-    width: 100vw;
-    height: 50px;
-    position: absolute;
+    gap: 5px;
+  }
 }

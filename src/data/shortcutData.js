@@ -9,6 +9,8 @@ const shortcutData = [
     id: "aboutMe",
     toggleHandler: "toggleAboutMe",
     toggleState: "isAboutMeOpen",
+    toggleMinHandler: "minimizeAboutMe",
+    minimizeState: "isAboutMeMinimized",
   },
   {
     name: "Skills.cmd",

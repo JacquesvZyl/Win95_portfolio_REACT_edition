@@ -5,12 +5,12 @@ import { useContext, useEffect, useState } from "react";
 import MainContext from "../../../store/Context";
 import styles from "./Desktop.module.scss";
 import DesktopShortcuts from "../desktop-shortcuts/DesktopShortcuts.component";
-import ProgramBorder from "../program-border/ProgramBorder.componentss";
 import AboutMe from "../../Programs/about-me/AboutMe.component";
 
 function Desktop() {
   const [showClippy, setShowClippy] = useState(false);
   const ctx = useContext(MainContext);
+  console.log("re-rendering whole desktop");
 
   useEffect(() => {
     console.log("from useeffect in App");

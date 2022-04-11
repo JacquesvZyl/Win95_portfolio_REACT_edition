@@ -15,6 +15,12 @@ function reducer(state, action) {
         isAboutMeOpen: !state.isAboutMeOpen,
       };
     }
+    case "TOGGLE_ABOUT_ME_MINIMIZED": {
+      return {
+        ...state,
+        isAboutMeMinimized: !state.isAboutMeMinimized,
+      };
+    }
 
     default:
       return initialState;
@@ -24,6 +30,7 @@ function reducer(state, action) {
 const initialState = {
   isMenuOpen: false,
   isAboutMeOpen: false,
+  isAboutMeMinimized: true,
 };
 function ContextProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -34,12 +41,17 @@ function ContextProvider(props) {
   function showAboutMeHandler() {
     dispatch({ type: "TOGGLE_ABOUT_ME" });
   }
+  function minimizeAboutMeHandler() {
+    dispatch({ type: "TOGGLE_ABOUT_ME_MINIMIZED" });
+  }
 
   const contextData = {
     isMenuOpen: state.isMenuOpen,
     isAboutMeOpen: state.isAboutMeOpen,
+    isAboutMeMinimized: state.isAboutMeMinimized,
     toggleMenu: showMenuHandler,
     toggleAboutMe: showAboutMeHandler,
+    minimizeAboutMe: minimizeAboutMeHandler,
   };
 
   return (

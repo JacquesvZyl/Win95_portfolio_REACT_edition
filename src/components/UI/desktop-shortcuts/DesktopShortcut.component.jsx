@@ -2,15 +2,17 @@ import React from "react";
 import styles from "./DesktopShortcut.module.scss";
 import Draggable from "react-draggable";
 
-function onClickHandler(e) {
-  console.log(e);
-}
 function DesktopShortcut(props) {
+  function onClickHandler() {
+    !props.state && props.stateHandler();
+    props.minimizeHandler();
+  }
+
   return (
     <Draggable>
       <div
         className={styles["desktop-shortcut"]}
-        onDoubleClick={!props.state ? props.onDoubleClick : undefined}
+        onDoubleClick={onClickHandler}
       >
         <img src={props.icon} alt="desktop icon" />
         <div className={styles.title}>{props.title}</div>
@@ -20,3 +22,11 @@ function DesktopShortcut(props) {
 }
 
 export default DesktopShortcut;
+
+/* 
+      stateHandler={ctx[shortcut.toggleHandler]}
+      minimizeHandler={ctx[shortcut.toggleMinHandler]}
+      state={ctx[shortcut.toggleState]}
+      minimizeState = {ctx[shortcut.minimizeState]}
+
+*/

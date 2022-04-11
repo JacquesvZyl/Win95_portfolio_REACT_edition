@@ -1,0 +1,11 @@
+.shortcut {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 5px;
+  img {
+    height: 20px;
+    width: 20px;
+  }
+}

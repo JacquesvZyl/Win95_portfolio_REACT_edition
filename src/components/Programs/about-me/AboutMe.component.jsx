@@ -7,11 +7,14 @@ import MainContext from "../../../store/Context";
 
 function AboutMe() {
   const ctx = useContext(MainContext);
+  const show = ctx.isAboutMeMinimized ? "none" : "inline";
   return (
     <ProgramBorder
       className={styles["main-container"]}
       state={ctx.isAboutMeOpen}
       onToggle={ctx.toggleAboutMe}
+      onMinimize={ctx.minimizeAboutMe}
+      style={{ display: show }}
     >
       <div className={styles.about}>
         <div className={styles.text}>

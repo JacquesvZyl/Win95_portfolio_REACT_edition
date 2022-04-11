@@ -9,8 +9,10 @@ function DesktopShortcuts() {
   console.log(ctx);
   const shortcuts = shortcutData.map((shortcut) => (
     <DesktopShortcut
-      onDoubleClick={ctx[shortcut.toggleHandler]}
+      stateHandler={ctx[shortcut.toggleHandler]}
+      minimizeHandler={ctx[shortcut.toggleMinHandler]}
       state={ctx[shortcut.toggleState]}
+      minimizeState={ctx[shortcut.minimizeState]}
       title={shortcut.name}
       icon={shortcut.icon}
       key={shortcut.id}
