@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
-import MainContext from "../../../../store/Context";
-import ProgramBorder from "../../../UI/program-border/ProgramBorder.componentss";
-import TypeWriter from "../../../UI/typewriter/TypeWriter.component";
+import MainContext from "../../../store/Context";
+import ProgramBorder from "../../UI/program-border/ProgramBorder.componentss";
+import TypeWriter from "../../UI/typewriter/TypeWriter.component";
+import shortcutData from "../../../data/shortcutData";
 
 import styles from "./Skills.module.scss";
 
@@ -45,6 +46,8 @@ function Skills() {
       onToggle={ctx.toggleSkills}
       onMinimize={ctx.minimizeSkills}
       minimizeState={ctx.isSkillsMinimized}
+      icon={shortcutData[1].icon}
+      name={shortcutData[1].name}
     >
       <div className={styles["text-container"]}>
         <p>Microsoft(R) Windows 95</p>
@@ -52,9 +55,9 @@ function Skills() {
         <p className={styles["first-prompt"]}>
           C:\Users\Jacques{">"}
           <TypeWriter
-            speed={200}
+            speed={150}
             text="cd skills"
-            waitTime={1000}
+            waitTime={800}
             doneChecker={lineOneHandler}
           />
         </p>
@@ -62,7 +65,7 @@ function Skills() {
           <p>
             C:\Users\Jacques\skills{">"}{" "}
             <TypeWriter
-              speed={300}
+              speed={200}
               text="dir"
               waitTime={800}
               doneChecker={lineTwoHandler}

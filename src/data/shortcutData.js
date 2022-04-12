@@ -27,6 +27,8 @@ const shortcutData = [
     id: "contactMe",
     toggleHandler: "toggleContactMe",
     toggleState: "isContactMeOpen",
+    toggleMinHandler: "minimizeContactMe",
+    minimizeState: "isContactMeMinimized",
   },
 ];
 

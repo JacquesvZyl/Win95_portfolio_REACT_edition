@@ -4,6 +4,7 @@ import jacquesImage from "../../../assets/images/other_images/Jacques.jpg";
 
 import styles from "./AboutMe.module.scss";
 import MainContext from "../../../store/Context";
+import shortcutData from "../../../data/shortcutData";
 
 function AboutMe() {
   const ctx = useContext(MainContext);
@@ -15,6 +16,8 @@ function AboutMe() {
       onToggle={ctx.toggleAboutMe}
       onMinimize={ctx.minimizeAboutMe}
       minimizeState={ctx.isAboutMeMinimized}
+      icon={shortcutData[0].icon}
+      name={shortcutData[0].name}
     >
       <div className={styles.about}>
         <div className={styles.text}>

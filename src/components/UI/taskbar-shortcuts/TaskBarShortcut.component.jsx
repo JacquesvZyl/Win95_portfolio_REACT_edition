@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Win95Border from "../win95-border/Win95Border.component";
 import styles from "./TaskBarShortcut.module.scss";
 

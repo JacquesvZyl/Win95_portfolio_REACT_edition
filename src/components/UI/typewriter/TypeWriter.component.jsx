@@ -22,7 +22,7 @@ function TypeWriter({ text, speed, waitTime, doneChecker }) {
     return () => {
       clearTimeout(timeout);
     };
-  }, [index, text]);
+  }, [index, text, doneChecker]);
 
   useEffect(() => {
     if (index === text.length) {

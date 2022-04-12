@@ -4,8 +4,6 @@ import styles from "./ProgramBorder.module.scss";
 import close from "../../../assets/images/other_images/win95_close.png";
 import minimize from "../../../assets/images/other_images/win95_minimize.png";
 import resize from "../../../assets/images/win95_icons/3lines.png";
-
-import shortcutData from "../../../data/shortcutData";
 import Draggable from "react-draggable";
 
 function ProgramBorder(props) {
@@ -26,8 +24,8 @@ function ProgramBorder(props) {
         <div className={styles.header}>
           <div className={styles["header-top"]} id="handle">
             <div className={styles["header-left"]}>
-              <img src={shortcutData[0].icon} alt="" />
-              <span>{shortcutData[0].name}</span>
+              <img src={props.icon} alt="" />
+              <span>{props.name}</span>
             </div>
             <div className={styles["header-right"]}>
               <img
