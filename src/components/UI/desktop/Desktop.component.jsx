@@ -8,6 +8,7 @@ import DesktopShortcuts from "../desktop-shortcuts/DesktopShortcuts.component";
 import AboutMe from "../../Programs/about-me/AboutMe.component";
 import Skills from "../../Programs/skills/Skills.componenet";
 import ContactMe from "../../Programs/contact-me/ContactMe.component";
+import Projects from "../../Programs/projects/Projects.component";
 
 function Desktop() {
   const [showClippy, setShowClippy] = useState(false);
@@ -36,6 +37,7 @@ function Desktop() {
       {ctx.isAboutMeOpen && <AboutMe />}
       {ctx.isSkillsOpen && <Skills />}
       {ctx.isContactMeOpen && <ContactMe />}
+      {ctx.isProjectsOpen && <Projects />}
 
       {showClippy && <Clippy />}
       <Taskbar className={styles.taskbar} />

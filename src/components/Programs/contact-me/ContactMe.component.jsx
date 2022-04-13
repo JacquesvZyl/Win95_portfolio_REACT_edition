@@ -7,6 +7,10 @@ import FormErrorHandle from "../../../custom-hooks/FormErrorHandle";
 import shortcutData from "../../../data/shortcutData";
 import MainContext from "../../../store/Context";
 
+const { 0: shortcut } = {
+  ...shortcutData.filter((shortcut) => shortcut.name === "Contact Me"),
+};
+
 function ContactMe() {
   const [messageText, setMessagetText] = useState("");
   const [formSubmitResult, setFormSubmitResult] = useState("");
@@ -80,8 +84,8 @@ function ContactMe() {
       onToggle={ctx.toggleContactMe}
       onMinimize={ctx.minimizeContactMe}
       minimizeState={ctx.isContactMeMinimized}
-      icon={shortcutData[2].icon}
-      name={shortcutData[2].name}
+      icon={shortcut.icon}
+      name={shortcut.name}
     >
       <form ref={form} onSubmit={sendEmail} className={styles["contact-me"]}>
         <div className={styles.button}>

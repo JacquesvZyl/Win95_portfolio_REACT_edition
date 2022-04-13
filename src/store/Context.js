@@ -5,15 +5,18 @@ const MainContext = React.createContext({
   isAboutMeOpen: false,
   isContactMeOpen: false,
   isSkillsOpen: false,
+  isProjectsOpen: false,
   isAboutMeMinimized: false,
   isSkillsMinimized: false,
   isContactMeMinimized: false,
   toggleAboutMe: () => {},
   toggleSkills: () => {},
+  toggleProjects: () => {},
   toggleMenu: () => {},
   toggleContactMe: () => {},
   minimizeAboutMe: () => {},
   minimizeSkills: () => {},
+  minimizeProjects: () => {},
   minimizeContactMe: () => {},
 });
 

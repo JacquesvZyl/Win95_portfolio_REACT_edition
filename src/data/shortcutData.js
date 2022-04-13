@@ -1,6 +1,7 @@
 import whoAmI from "../assets/images/win95_icons/Help book.ico";
 import msDos from "../assets/images/win95_icons/MS-DOS logo.ico";
 import mail from "../assets/images/win95_icons/Mail.ico";
+import projects from "../assets/images/win95_icons/WordPad document.ico";
 
 const shortcutData = [
   {
@@ -29,6 +30,15 @@ const shortcutData = [
     toggleState: "isContactMeOpen",
     toggleMinHandler: "minimizeContactMe",
     minimizeState: "isContactMeMinimized",
+  },
+  {
+    name: "Projects",
+    icon: projects,
+    id: "projects",
+    toggleHandler: "toggleProjects",
+    toggleState: "isProjectsOpen",
+    toggleMinHandler: "minimizeProjects",
+    minimizeState: "isProjectsMinimized",
   },
 ];
 

@@ -27,6 +27,12 @@ function reducer(state, action) {
         isContactMeOpen: !state.isContactMeOpen,
       };
     }
+    case "TOGGLE_PROJECTS": {
+      return {
+        ...state,
+        isProjectsOpen: !state.isProjectsOpen,
+      };
+    }
     case "TOGGLE_ABOUT_ME_MINIMIZED": {
       return {
         ...state,
@@ -45,6 +51,12 @@ function reducer(state, action) {
         isContactMeMinimized: !state.isContactMeMinimized,
       };
     }
+    case "TOGGLE_PROJECTS_MINIMIZED": {
+      return {
+        ...state,
+        isProjectsMinimized: !state.isProjectsMinimized,
+      };
+    }
 
     default:
       return initialState;
@@ -56,9 +68,11 @@ const initialState = {
   isAboutMeOpen: false,
   isSkillsOpen: false,
   isContactMeOpen: false,
+  isProjectsOpen: false,
   isAboutMeMinimized: true,
   isSkillsMinimized: true,
   isContactMeMinimized: true,
+  isProjectsMinimized: true,
 };
 function ContextProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -75,8 +89,14 @@ function ContextProvider(props) {
   function showSkillsHandler() {
     dispatch({ type: "TOGGLE_SKILLS" });
   }
+  function showProjectsHandler() {
+    dispatch({ type: "TOGGLE_PROJECTS" });
+  }
   function minimizeSkillsHandler() {
     dispatch({ type: "TOGGLE_SKILLS_MINIMIZED" });
+  }
+  function minimizeProjectsHandler() {
+    dispatch({ type: "TOGGLE_PROJECTS_MINIMIZED" });
   }
   function minimizeAboutMeHandler() {
     dispatch({ type: "TOGGLE_ABOUT_ME_MINIMIZED" });
@@ -89,17 +109,21 @@ function ContextProvider(props) {
     isMenuOpen: state.isMenuOpen,
     isAboutMeOpen: state.isAboutMeOpen,
     isSkillsOpen: state.isSkillsOpen,
+    isProjectsOpen: state.isProjectsOpen,
     isContactMeOpen: state.isContactMeOpen,
     isSkillsMinimized: state.isSkillsMinimized,
+    isProjectsMinimized: state.isProjectsMinimized,
     isAboutMeMinimized: state.isAboutMeMinimized,
     isContactMeMinimized: state.isContactMeMinimized,
     toggleMenu: showMenuHandler,
     toggleAboutMe: showAboutMeHandler,
     toggleSkills: showSkillsHandler,
+    toggleProjects: showProjectsHandler,
     toggleContactMe: showContactMeHandler,
     minimizeSkills: minimizeSkillsHandler,
     minimizeAboutMe: minimizeAboutMeHandler,
     minimizeContactMe: minimizeContactMeHandler,
+    minimizeProjects: minimizeProjectsHandler,
   };
 
   return (

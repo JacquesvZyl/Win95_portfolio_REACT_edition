@@ -6,6 +6,10 @@ import styles from "./AboutMe.module.scss";
 import MainContext from "../../../store/Context";
 import shortcutData from "../../../data/shortcutData";
 
+const { 0: shortcut } = {
+  ...shortcutData.filter((shortcut) => shortcut.name === "About Me"),
+};
+
 function AboutMe() {
   const ctx = useContext(MainContext);
 
@@ -16,8 +20,8 @@ function AboutMe() {
       onToggle={ctx.toggleAboutMe}
       onMinimize={ctx.minimizeAboutMe}
       minimizeState={ctx.isAboutMeMinimized}
-      icon={shortcutData[0].icon}
-      name={shortcutData[0].name}
+      icon={shortcut.icon}
+      name={shortcut.name}
     >
       <div className={styles.about}>
         <div className={styles.text}>

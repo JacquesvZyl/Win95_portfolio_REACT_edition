@@ -6,6 +6,10 @@ import shortcutData from "../../../data/shortcutData";
 
 import styles from "./Skills.module.scss";
 
+const { 0: shortcut } = {
+  ...shortcutData.filter((shortcut) => shortcut.name === "Skills.cmd"),
+};
+
 function Skills() {
   const [isDoneTyping, setIsDoneTyping] = useState({
     lineOne: false,
@@ -46,8 +50,8 @@ function Skills() {
       onToggle={ctx.toggleSkills}
       onMinimize={ctx.minimizeSkills}
       minimizeState={ctx.isSkillsMinimized}
-      icon={shortcutData[1].icon}
-      name={shortcutData[1].name}
+      icon={shortcut.icon}
+      name={shortcut.name}
     >
       <div className={styles["text-container"]}>
         <p>Microsoft(R) Windows 95</p>
