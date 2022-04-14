@@ -21,6 +21,12 @@ function reducer(state, action) {
         isSkillsOpen: !state.isSkillsOpen,
       };
     }
+    case "TOGGLE_VIRUS": {
+      return {
+        ...state,
+        isVirusOpen: !state.isVirusOpen,
+      };
+    }
     case "TOGGLE_CONTACT_ME": {
       return {
         ...state,
@@ -67,6 +73,7 @@ const initialState = {
   isMenuOpen: false,
   isAboutMeOpen: false,
   isSkillsOpen: false,
+  isVirusOpen: false,
   isContactMeOpen: false,
   isProjectsOpen: false,
   isAboutMeMinimized: true,
@@ -89,6 +96,9 @@ function ContextProvider(props) {
   function showSkillsHandler() {
     dispatch({ type: "TOGGLE_SKILLS" });
   }
+  function showVirusHandler() {
+    dispatch({ type: "TOGGLE_VIRUS" });
+  }
   function showProjectsHandler() {
     dispatch({ type: "TOGGLE_PROJECTS" });
   }
@@ -109,6 +119,7 @@ function ContextProvider(props) {
     isMenuOpen: state.isMenuOpen,
     isAboutMeOpen: state.isAboutMeOpen,
     isSkillsOpen: state.isSkillsOpen,
+    isVirusOpen: state.isVirusOpen,
     isProjectsOpen: state.isProjectsOpen,
     isContactMeOpen: state.isContactMeOpen,
     isSkillsMinimized: state.isSkillsMinimized,
@@ -118,6 +129,7 @@ function ContextProvider(props) {
     toggleMenu: showMenuHandler,
     toggleAboutMe: showAboutMeHandler,
     toggleSkills: showSkillsHandler,
+    toggleVirus: showVirusHandler,
     toggleProjects: showProjectsHandler,
     toggleContactMe: showContactMeHandler,
     minimizeSkills: minimizeSkillsHandler,

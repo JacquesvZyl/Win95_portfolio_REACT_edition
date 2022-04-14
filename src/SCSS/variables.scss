@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "Windows Command Prompt";
+  src: url("../assets/font/windows_command_prompt/Windows-Command-Prompt.woff2")
+      format("woff2"),
+    url("../assets/font/windows_command_prompt/Windows-Command-Prompt.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BSOD";
+  src: local("BSOD"),
+    url("../assets/font/Perfect.DOS.VGA.437.ttf") format("truetype");
+}
+
 // COLOURS
 $colorBackgroundBlue: #018282;
 $colorTaskBar: #bfbfbf;
@@ -10,6 +27,7 @@ $colorWin95Gradient: linear-gradient(to right, #000181, #0874b6);
 $colorWin95GradientReverse: linear-gradient(to left, #000181, #0874b6);
 // FONT
 $font: "MS Sans Serif", sans-serif;
+$fontBSOD: "BSOD", sans-serif;
 $fontDos: "windows command prompt", monospace;
 $fontSize: 1.2rem;
 $fontRoboto: "Roboto Mono", monospace;

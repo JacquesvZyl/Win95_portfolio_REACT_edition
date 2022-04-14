@@ -5,7 +5,7 @@ import styles from "./StartMenuShortcut.module.scss";
 function StartMenuShortcut(props) {
   function onClickHandler() {
     !props.state && props.onToggle();
-    props.onMinimizeToggle();
+    props.onMinimizeToggle && props.onMinimizeToggle();
   }
   return (
     <div

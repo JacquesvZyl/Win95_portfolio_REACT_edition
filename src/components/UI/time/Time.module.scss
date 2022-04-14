@@ -1,6 +1,11 @@
 .clock {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  padding: 2px 5px;
+  margin-left: auto;
+  img {
+    height: 20px;
+    width: 20px;
+  }
 }

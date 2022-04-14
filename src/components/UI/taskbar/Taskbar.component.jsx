@@ -14,10 +14,10 @@ function Taskbar(props) {
   return (
     <div className={`${styles.taskbar} ${props.className}`}>
       {ctx.isMenuOpen && <StartMenu />}
-      <div className={styles["left-container"]}>
-        <StartButton isClicked={ctx.isMenuOpen} onClick={buttonClickHandler} />
-        <TaskBarShortcuts />
-      </div>
+      {/* <div className={styles["left-container"]}> */}
+      <StartButton isClicked={ctx.isMenuOpen} onClick={buttonClickHandler} />
+      <TaskBarShortcuts />
+
       <Time />
     </div>
   );

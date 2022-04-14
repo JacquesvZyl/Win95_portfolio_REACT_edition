@@ -4,6 +4,7 @@ import MainContext from "../../../store/Context";
 import Win95Border from "../win95-border/Win95Border.component";
 import styles from "./StartMenu.module.scss";
 import StartMenuShortcut from "./StartMenuShortcut.component";
+import virusIcon from "../../../assets/images/win95_icons/Program.ico";
 
 function StartMenu(props) {
   const ctx = useContext(MainContext);
@@ -24,7 +25,14 @@ function StartMenu(props) {
         Windows<span>95</span>
       </div>
       <div className={styles["shortcut-container"]}>
-        <div className={styles["menu-top"]}>{shortcuts}</div>
+        <div className={styles["menu-top"]}>
+          {shortcuts}
+          <StartMenuShortcut
+            text="NOT_A_VIRUS.exe"
+            icon={virusIcon}
+            onToggle={ctx.toggleVirus}
+          />
+        </div>
       </div>
     </Win95Border>
   );

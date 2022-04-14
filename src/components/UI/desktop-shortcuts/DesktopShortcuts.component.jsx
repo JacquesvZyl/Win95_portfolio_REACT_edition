@@ -3,10 +3,11 @@ import styles from "./DesktopShortcuts.module.scss";
 import shortcutData from "../../../data/shortcutData";
 import DesktopShortcut from "./DesktopShortcut.component";
 import MainContext from "../../../store/Context";
+import virusIcon from "../../../assets/images/win95_icons/Program.ico";
 
 function DesktopShortcuts() {
   const ctx = useContext(MainContext);
-  console.log(ctx);
+
   const shortcuts = shortcutData.map((shortcut) => (
     <DesktopShortcut
       stateHandler={ctx[shortcut.toggleHandler]}
@@ -19,7 +20,16 @@ function DesktopShortcuts() {
     />
   ));
 
-  return <div className={styles["desktop-shortcuts"]}>{shortcuts}</div>;
+  return (
+    <div className={styles["desktop-shortcuts"]}>
+      {shortcuts}
+      <DesktopShortcut
+        title="NOT_A_VIRUS.EXE"
+        icon={virusIcon}
+        stateHandler={ctx.toggleVirus}
+      />
+    </div>
+  );
 }
 
 export default DesktopShortcuts;

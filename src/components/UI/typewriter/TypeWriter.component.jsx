@@ -39,7 +39,6 @@ function TypeWriter({ text, speed, waitTime, doneChecker }) {
         setIndex((val) => val + 1);
       }, speed);
 
-      console.log("RENDERING WHOLE FUCKING THING");
       return () => {
         clearTimeout(timeout);
         clearTimeout(waitingTimeout);

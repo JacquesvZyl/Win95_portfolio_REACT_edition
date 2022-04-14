@@ -67,7 +67,7 @@ function Skills() {
         </p>
         {isDoneTyping.lineOne && (
           <p>
-            C:\Users\Jacques\skills{">"}{" "}
+            C:\Users\Jacques\skills{">"}
             <TypeWriter
               speed={200}
               text="dir"
@@ -77,6 +77,7 @@ function Skills() {
           </p>
         )}
         {isDoneTyping.lineTwo && skills}
+        {isDoneTyping.lineTwo && <p>C:\Users\Jacques\skills{">"}</p>}
       </div>
     </ProgramBorder>
   );

@@ -9,14 +9,13 @@ import AboutMe from "../../Programs/about-me/AboutMe.component";
 import Skills from "../../Programs/skills/Skills.componenet";
 import ContactMe from "../../Programs/contact-me/ContactMe.component";
 import Projects from "../../Programs/projects/Projects.component";
+import Virus from "../../Programs/not-a-virus/Virus.component";
 
 function Desktop() {
   const [showClippy, setShowClippy] = useState(false);
   const ctx = useContext(MainContext);
-  console.log("re-rendering whole desktop");
 
   useEffect(() => {
-    console.log("from useeffect in App");
     setShowClippy(true);
 
     const timeOut = setTimeout(() => {
@@ -34,6 +33,7 @@ function Desktop() {
   return (
     <div className={styles.desktop} onClick={closeMenu}>
       <DesktopShortcuts />
+      {ctx.isVirusOpen && <Virus />}
       {ctx.isAboutMeOpen && <AboutMe />}
       {ctx.isSkillsOpen && <Skills />}
       {ctx.isContactMeOpen && <ContactMe />}

@@ -5,7 +5,7 @@ import Draggable from "react-draggable";
 function DesktopShortcut(props) {
   function onClickHandler() {
     !props.state && props.stateHandler();
-    props.minimizeHandler();
+    props.minimizeHandler && props.minimizeHandler();
   }
 
   return (
