@@ -5,6 +5,7 @@ import Win95Border from "../win95-border/Win95Border.component";
 import styles from "./StartMenu.module.scss";
 import StartMenuShortcut from "./StartMenuShortcut.component";
 import virusIcon from "../../../assets/images/win95_icons/Program.ico";
+import gitHubIcon from "../../../assets/images/other_images/GitHub-Mark-32px.png";
 
 function StartMenu(props) {
   const ctx = useContext(MainContext);
@@ -32,6 +33,15 @@ function StartMenu(props) {
             icon={virusIcon}
             onToggle={ctx.toggleVirus}
           />
+        </div>
+        <div className={styles["menu-bottom"]}>
+          <a
+            href="https://github.com/JacquesvZyl"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <StartMenuShortcut text="My Github" icon={gitHubIcon} />
+          </a>
         </div>
       </div>
     </Win95Border>

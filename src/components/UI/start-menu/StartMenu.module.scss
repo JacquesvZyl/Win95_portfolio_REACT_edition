@@ -30,4 +30,21 @@
     flex-direction: column;
     width: 100%;
   }
+
+  .menu-bottom {
+    border-top: 2px solid $colorDarkGray;
+    padding-bottom: 5px;
+
+    &:before {
+      background: $colorLightGray;
+      height: 2px;
+      content: "";
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
 }
