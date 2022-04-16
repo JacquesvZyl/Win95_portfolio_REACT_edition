@@ -56,8 +56,7 @@ function AboutMe() {
           <br />
           <p>
             I'm currently laser focused on front-end web development and taught
-            myself HTML, CSS, JavaScript, React, Nodejs with express, and
-            mongoDB.
+            myself HTML, CSS & SCSS/SASS, JavaScript, React and Redux.
           </p>
           <p>
             I'm fascinated with creating content and user experiences with code.
