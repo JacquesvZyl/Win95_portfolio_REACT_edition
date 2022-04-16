@@ -3,6 +3,7 @@ import msDos from "../assets/images/win95_icons/MS-DOS logo.ico";
 import mail from "../assets/images/win95_icons/Mail.ico";
 import projects from "../assets/images/win95_icons/WordPad document.ico";
 
+
 const shortcutData = [
   {
     name: "About Me",

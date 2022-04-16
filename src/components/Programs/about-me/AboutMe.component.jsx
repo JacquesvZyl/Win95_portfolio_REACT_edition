@@ -31,6 +31,7 @@ function AboutMe() {
             Cape Town, South Africa, I'm currently living in Bangkok, Thailand
             with my wonderful wife since late 2020.
           </p>
+          <br />
           <p>
             In 2020 I was retrenched from my job as an Application support
             engineer. I thought to myself that this was the perfect opportunity
@@ -43,7 +44,7 @@ function AboutMe() {
             Development, mostly for fun and out of curiosity.
           </p>
           <p>
-            One of my android games was actually{" "}
+            One of my android games was{" "}
             <a
               target="_blank"
               rel="noreferrer"
@@ -52,9 +53,11 @@ function AboutMe() {
               nominated for best sport game of 2021 on PocketGamer.com.
             </a>
           </p>
+          <br />
           <p>
-            I'm currently laser focused on web development and taught myself
-            HTML, CSS, JavaScript, React, Nodejs with express, and mongoDB.
+            I'm currently laser focused on front-end web development and taught
+            myself HTML, CSS, JavaScript, React, Nodejs with express, and
+            mongoDB.
           </p>
           <p>
             I'm fascinated with creating content and user experiences with code.

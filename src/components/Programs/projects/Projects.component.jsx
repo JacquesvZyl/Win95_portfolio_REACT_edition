@@ -6,11 +6,11 @@ import shortcutData from "../../../data/shortcutData";
 import Project from "./Project.component";
 import movieQuiz from "../../../assets/images/projects/The-Movie-Quiz.jpg";
 import foodFury from "../../../assets/images/projects/food-fury.png";
-import mapty from "../../../assets/images/projects/Mapty.jpg";
+import chart from "../../../assets/images/projects/Chart.jpg";
 import {
   movieQuizData,
   foodFuryData,
-  maptyData,
+  chartData,
 } from "../../../data/projectData";
 
 const { 0: shortcut } = {
@@ -35,7 +35,7 @@ function Projects() {
         <div className={styles["projects-container"]}>
           <Project image={movieQuiz} data={movieQuizData} />
           <Project image={foodFury} data={foodFuryData} />
-          <Project image={mapty} data={maptyData} />
+          <Project image={chart} data={chartData} />
         </div>
       </div>
     </ProgramBorder>
