@@ -1,5 +1,22 @@
 @import "../src/SCSS/variables.scss";
 
+@font-face {
+  font-family: "Windows Command Prompt";
+  src: url("../src/assets/font/windows_command_prompt/Windows-Command-Prompt.woff2")
+      format("woff2"),
+    url("../src/assets/font/windows_command_prompt/Windows-Command-Prompt.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BSOD";
+  src: local("BSOD"),
+    url("../src/assets/font/Perfect.DOS.VGA.437.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
