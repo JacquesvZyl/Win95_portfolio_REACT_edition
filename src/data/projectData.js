@@ -22,3 +22,11 @@ export const chartData = {
   link: "https://the-chart-app.netlify.app/",
   codeLink: "https://github.com/JacquesvZyl/Chart",
 };
+export const netflixCloneData = {
+  title: "Neflix Clone",
+  description:
+    "a Clone of Netflix with working stripe payments and trailer playback functionality. Read the readme on GitHub for more info",
+  technologies: ["HTML", "CSS", "React", "Firebase"],
+  link: "https://netflix-clone-jvz.netlify.app/",
+  codeLink: "https://github.com/JacquesvZyl/Netflix_clone",
+};
