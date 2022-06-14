@@ -30,3 +30,11 @@ export const netflixCloneData = {
   link: "https://netflix-clone-jvz.netlify.app/",
   codeLink: "https://github.com/JacquesvZyl/Netflix_clone",
 };
+export const thaiLicenceData = {
+  title: "Thai-driving-licence.com",
+  description:
+    "a Study app made for foreigners in Thailand who wants to practice for the Driving Licence theory test.",
+  technologies: ["HTML", "CSS", "Javascript", "React", "Firebase"],
+  link: "https://www.thai-driving-licence.com/",
+  codeLink: "https://github.com/JacquesvZyl/Thai_driving_Licence_site",
+};
