@@ -38,3 +38,11 @@ export const thaiLicenceData = {
   link: "https://www.thai-driving-licence.com/",
   codeLink: "https://github.com/JacquesvZyl/Thai_driving_Licence_site",
 };
+export const bugTrackerData = {
+  title: "Bug Tracker",
+  description:
+    "a Bug Tracker App which I now personally use to track my bugs. Projects can be added, edited and deleted. You can also add tickets under each project and categorize them under severity, status and type. Permissions/roles can be set for each user to restrict user access",
+  technologies: ["HTML", "CSS", "Javascript", "React", "Firebase"],
+  link: "https://jvz-bugtracker.netlify.app/",
+  codeLink: "https://github.com/JacquesvZyl/Bug_Tracker",
+};
