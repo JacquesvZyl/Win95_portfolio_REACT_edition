@@ -62,3 +62,11 @@
     max-width: 800px;
   }
 }
+@media screen and (max-width: 355px) {
+  .project-container {
+    min-height: 500px;
+  }
+  .technologies {
+    flex-direction: column;
+  }
+}
