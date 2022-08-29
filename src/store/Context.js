@@ -2,7 +2,7 @@ import React from "react";
 
 const MainContext = React.createContext({
   isMenuOpen: false,
-  isAboutMeOpen: false,
+  isAboutMeOpen: true,
   isContactMeOpen: false,
   isSkillsOpen: false,
   isProjectsOpen: false,

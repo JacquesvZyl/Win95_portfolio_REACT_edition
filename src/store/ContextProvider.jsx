@@ -71,12 +71,12 @@ function reducer(state, action) {
 
 const initialState = {
   isMenuOpen: false,
-  isAboutMeOpen: false,
+  isAboutMeOpen: true,
   isSkillsOpen: false,
   isVirusOpen: false,
   isContactMeOpen: false,
   isProjectsOpen: false,
-  isAboutMeMinimized: true,
+  isAboutMeMinimized: false,
   isSkillsMinimized: true,
   isContactMeMinimized: true,
   isProjectsMinimized: true,
