@@ -31,10 +31,11 @@ function Skills() {
         <p>CSS</p>
         <p>SCSS &amp; SASS</p>
         <p>JavaScript</p>
+        <p>React</p>
       </div>
       <div>
-        <p>React</p>
         <p>Redux</p>
+        <p>Firebase</p>
         <p>C#</p>
         <p>Unity</p>
       </div>
